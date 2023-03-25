@@ -10,6 +10,8 @@
  */
 namespace Ethereum\DataType;
 
+use Ethereum\Ethereum;
+
 /**
  * Ethereum data type Block.
  * 
