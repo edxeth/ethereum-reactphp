@@ -578,21 +578,21 @@ class Ethereum extends EthereumStatic implements Web3Interface
    */
     public static function valueArray(array $values, string $typeClass)
     {
-        $return = [];
-        if (!class_exists($typeClass)) {
-            $typeClass = '\\' . __NAMESPACE__  . '\\DataType\\' . $typeClass;
-        }
-        foreach ($values as $i => $val) {
-            if (is_object($val)) {
-                $return[$i] = $val->toArray();
-            }
-            if (is_array($val)) {
-                $return[$i] = self::arrayToComplexType($typeClass, $val);
-            }
-            $return[$i] = new $typeClass($val);
-        }
-        return $return;
-    }
+		$return = [];
+		if (!class_exists($typeClass)) {
+			$typeClass = '\\' . __NAMESPACE__  . '\\DataType\\' . $typeClass;
+		}
+		foreach ($values as $i => $val) {
+			if (is_object($val)) {
+				$return[$i] = $val->toArray();
+			} elseif (is_array($val)) {
+				$return[$i] = self::arrayToComplexType($typeClass, $val);
+			} else {
+				$return[$i] = new $typeClass($val);
+			}
+		}
+		return $return;
+	}
 
 
 }
