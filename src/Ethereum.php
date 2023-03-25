@@ -358,7 +358,7 @@ class Ethereum extends EthereumStatic implements Web3Interface
         // If the method is eth_getBlockByNumber, remove leading zeros after '0x' for block number (comment the IF condition if you are NOT connected to a geth node)
         if ($method === 'eth_getBlockByNumber') {
             $blockNumber = $params[0];
-            if (is_string($blockNumber) && strpos($blockNumber, '0x') === 0) {
+            if (is_string($blockNumber) && strpos($blockNumber, '0x') === 0 && $blockNumber != '0x0') {
                 $hexVal = preg_replace('/^0x0+/', '0x', $blockNumber);
                 $params[0] = $hexVal;
             }
