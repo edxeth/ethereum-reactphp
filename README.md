@@ -1,4 +1,4 @@
-# Ethereum-PHP
+# Ethereum-ReactPHP (updated with listener and indexer)
 
 is a typed PHP-7.1+ interface to [Ethereum JSON-RPC API](https://github.com/ethereum/wiki/wiki/JSON-RPC).
 
@@ -98,7 +98,7 @@ For reference see the [Ethereum RPC documentation](https://github.com/ethereum/w
 
 There is also a more readable [Ethereum Frontier Guide](http://ethereum.gitbooks.io/frontier-guide/content/rpc.html) version.
 
-# Ethereum-php Listener and Indexer
+# Listener and Indexer
 
 **TL;DR**
 
