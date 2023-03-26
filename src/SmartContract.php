@@ -57,7 +57,7 @@ class SmartContract
     {
         $this->abi = new Abi($abi);
         $this->eth = $eth;
-        $this->contractAddress = $contractAddress;
+        $this->contractAddress = strtolower($contractAddress); // strtolower is mandatory for geth nodes
         $this->events = $this->abi->getEventsByTopic();
     }
 
