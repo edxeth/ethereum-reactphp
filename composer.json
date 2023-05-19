@@ -4,7 +4,7 @@
   "require": {
     "php": ">=7.1",
     "ext-json": "*",
-    "graze/guzzle-jsonrpc": "~3.0",
+    "evently/guzzle-jsonrpc": "~3.0",
     "pear/math_biginteger": "^1.0",
     "kornrunner/keccak": "^1.0",
     "digitaldonkey/ecverify":"1.0"
